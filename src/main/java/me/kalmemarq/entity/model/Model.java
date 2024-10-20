@@ -17,7 +17,7 @@ import java.util.Map;
 public abstract class Model {
     public static Model.ModelPart loadRoot(String name) {
         try {
-            return Model.ModelPart.loadFromJson(IOUtils.OBJECT_MAPPER.readTree(Files.readString(IOUtils.getResourcesPath().resolve("model/" + name + ".json"))));
+            return Model.ModelPart.loadFromJson(IOUtils.OBJECT_MAPPER.readTree(Files.readString(IOUtils.getResourcesPath().resolve("models/" + name + ".json"))));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
